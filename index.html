@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ada Alexandra · Software Engineer & Brand Model</title>
+<meta name="description" content="Portfolio of Ebode Ada Erika Alexandra: software engineering student at ICT University and brand model. Code projects and photo shoots.">
+<meta name="theme-color" content="#0c0a09">
+<meta property="og:title" content="Ada Alexandra · Software Engineer & Brand Model">
+<meta property="og:image" content="images/oshine-3.jpg"><!-- after hosting, change to the full URL, e.g. https://yoursite.com/images/oshine-3.jpg -->
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ===== THEME: change colours here ===== */
+:root{--bg:#0c0a09;--bg2:#14110f;--ink:#f3ede2;--mute:#a69d8f;--gold:#d9a441;--line:rgba(243,237,226,.13);--r:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg);color:var(--ink);font:400 1rem/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,92%);margin-inline:auto}
+.serif,h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:300}
+em{font-style:italic;color:var(--gold)}
+.eyebrow{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+h2{font-size:clamp(2.1rem,5vw,3.7rem);line-height:1.08;margin-bottom:1rem}
+.lead{color:var(--mute);max-width:56ch;font-size:1.05rem}
+.sec{padding:clamp(4rem,10vw,8rem) 0}
+.btn{display:inline-block;padding:.9rem 1.7rem;border-radius:99px;border:1px solid var(--line);font-weight:500;font-size:.92rem;transition:.3s}
+.btn.fill{background:var(--gold);border-color:var(--gold);color:#17110a}
+.btn:hover{border-color:var(--gold);transform:translateY(-2px)}
+.btn.fill:hover{background:#e8b55a}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* Header */
+header{position:fixed;inset:0 0 auto;z-index:50;transition:.4s}
+header.solid{background:rgba(12,10,9,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font:italic 300 1.7rem Fraunces,serif}.logo b{color:var(--gold);font-weight:300}
+.links{display:flex;gap:2.2rem;font-size:.9rem}
+.links a{color:var(--mute);transition:.3s}.links a:hover{color:var(--ink)}
+#menu{display:none;background:none;border:0;color:var(--ink);font-size:1.6rem;cursor:pointer}
+
+/* Hero */
+.hero{min-height:100svh;display:flex;align-items:center;padding:7rem 0 4rem;background:radial-gradient(60rem 40rem at 85% 20%,rgba(217,164,65,.14),transparent 60%)}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:4rem;align-items:center}
+h1{font-size:clamp(3.4rem,9.5vw,8rem);line-height:.92;letter-spacing:-.02em;margin-bottom:1.6rem}
+.hero p.lead{margin-bottom:2.2rem}
+.cta{display:flex;gap:.8rem;flex-wrap:wrap}
+.facts{display:flex;gap:2.5rem;flex-wrap:wrap;margin-top:3.2rem;padding-top:1.6rem;border-top:1px solid var(--line);font-size:.85rem;color:var(--mute)}
+.facts b{display:block;color:var(--ink);font:400 1.15rem Fraunces,serif}
+.frame{position:relative;isolation:isolate;max-width:420px;margin-left:auto}
+.frame::before{content:"";position:absolute;inset:20px -20px -20px 20px;border:1px solid var(--gold);border-radius:999px 999px var(--r) var(--r);z-index:-1}
+.frame img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:999px 999px var(--r) var(--r)}
+
+/* Marquee */
+.marq{overflow:hidden;border-block:1px solid var(--line);padding:1.1rem 0}
+.marq div{display:flex;gap:3rem;width:max-content;white-space:nowrap;font:italic 300 1.7rem Fraunces,serif;color:var(--mute);animation:m 38s linear infinite}
+.marq i{color:var(--gold);font-style:normal}
+@keyframes m{to{transform:translateX(-50%)}}
+
+/* Photos */
+.ph{position:relative;display:block;width:100%;padding:0;border:0;background:#1b1714;border-radius:var(--r);overflow:hidden;cursor:zoom-in}
+.ph img{width:100%;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.ph:hover img{transform:scale(1.05)}
+.ph::after{content:attr(data-cap);position:absolute;inset:auto 0 0;padding:3rem 1rem 1rem;text-align:left;font:.82rem Inter,sans-serif;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.78));opacity:0;transform:translateY(8px);transition:.4s}
+.ph:hover::after,.ph:focus-visible::after{opacity:1;transform:none}
+.chapter{margin-top:4.5rem}
+.chapter h3{font-size:clamp(1.6rem,3vw,2.3rem);margin-bottom:.4rem}
+.chapter .lead{margin-bottom:2rem}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.trio .ph:nth-child(2){margin-top:3.5rem}
+.trio img{aspect-ratio:2/3;object-fit:cover}
+.masonry{columns:3 260px;column-gap:1rem}
+.masonry .ph{break-inside:avoid;margin-bottom:1rem}
+
+.brandrow{display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:center;margin-bottom:2rem}
+.brandrow .lead{margin-bottom:0!important}
+.blogo{width:min(340px,100%);border-radius:var(--r);border:1px solid var(--line)}
+.vids{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
+.vids>div{display:flex}.vids .ph{height:100%}.vids .ph img{height:100%;object-fit:cover}
+.vcard video{height:auto}
+.vcard video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:var(--r);background:#1b1714;border:1px solid var(--line)}
+@media(max-width:700px){.brandrow{grid-template-columns:1fr}}
+
+.worked{margin-top:2.8rem;padding:1.6rem 0;border-block:1px solid var(--line)}
+.worked .eyebrow{margin-bottom:1.3rem}
+.wlist{display:flex;flex-wrap:wrap;gap:1.8rem 3rem}
+.wi{display:flex;flex-direction:column;align-items:center;gap:.6rem;width:104px;text-align:center;font-size:.8rem;color:var(--mute)}
+.wc{width:92px;height:92px;border-radius:50%;overflow:hidden;background:#fff;border:1px solid var(--line);display:grid;place-items:center;transition:.3s}
+.wi:hover .wc{border-color:var(--gold);transform:translateY(-3px)}
+.wc img{width:100%;height:100%;object-fit:cover;transform:scale(1.07)}
+.wc.txt{background:var(--bg2);color:var(--gold);font:italic 300 1.15rem Fraunces,serif}
+
+/* Code */
+.repos{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem;margin-top:2.5rem}
+.repo{display:flex;flex-direction:column;gap:.9rem;padding:1.7rem;border:1px solid var(--line);border-radius:var(--r);background:var(--bg2);transition:.35s}
+.repo:hover{border-color:var(--gold);transform:translateY(-5px)}
+.repo h3{font-size:1.45rem;word-break:break-word}
+.repo p{color:var(--mute);font-size:.95rem;flex:1}
+.meta{display:flex;gap:.4rem;flex-wrap:wrap}
+.chip{border:1px solid var(--line);padding:.2rem .75rem;border-radius:99px;font-size:.75rem;color:var(--mute)}
+.chip.hot{color:var(--gold);border-color:rgba(217,164,65,.4)}
+.rlinks{display:flex;gap:1.2rem;font-size:.88rem;font-weight:500}
+.rlinks a:hover{color:var(--gold)}
+
+
+/* MindBridge */
+[hidden]{display:none!important}
+.mb{display:grid;grid-template-columns:1.15fr .85fr;gap:2.5rem;margin-top:2.5rem;align-items:start}
+.vid video,.soon{width:100%;aspect-ratio:16/9;border-radius:var(--r);background:#1b1714;border:1px solid var(--line);object-fit:cover}
+.soon{display:grid;place-items:center;color:var(--mute);font:italic 300 1.3rem Fraunces,serif}
+.principle{border-left:2px solid var(--gold);padding:.4rem 0 .4rem 1.3rem;font:italic 300 1.35rem/1.5 Fraunces,serif}
+.principle small{display:block;margin-top:.8rem;font:500 .72rem Inter,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.feats{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1rem;margin-top:2.5rem}
+.feat{padding:1.4rem;border:1px solid var(--line);border-radius:var(--r);background:var(--bg)}
+.feat h4{font:400 1.2rem Fraunces,serif;margin-bottom:.3rem}
+.feat p{color:var(--mute);font-size:.9rem}
+.feat .lock{display:block;margin-top:.9rem;padding-top:.7rem;border-top:1px solid var(--line);font-size:.78rem;color:var(--gold)}
+.arch{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin-top:1rem;counter-reset:a}
+.arch div{position:relative;padding:1.2rem;border:1px dashed rgba(217,164,65,.5);border-radius:var(--r);font-size:.88rem;color:var(--mute)}
+.arch div:not(:last-child)::after{content:"→";position:absolute;right:-.85rem;top:50%;transform:translateY(-50%);color:var(--gold);background:var(--bg2);z-index:1}
+.arch b{display:block;color:var(--ink);font:400 1.1rem Fraunces,serif;margin-bottom:.3rem}
+@media(max-width:860px){.mb{grid-template-columns:1fr}.arch{grid-template-columns:1fr}.arch div:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-.95rem;transform:translateX(-50%)}}
+
+
+/* More projects */
+.pj{margin-top:2.5rem;padding:clamp(1.4rem,3vw,2.4rem);border:1px solid var(--line);border-radius:calc(var(--r) + 6px);background:var(--bg2)}
+.pjh{display:flex;justify-content:space-between;gap:1.5rem;align-items:flex-start;flex-wrap:wrap;margin-bottom:1.6rem}
+.pj h3{font-size:clamp(1.7rem,3.4vw,2.4rem)}.pj h3 small{display:block;font:400 .95rem Inter,sans-serif;color:var(--gold);margin-top:.2rem}
+.pj .pjh p{color:var(--mute);max-width:60ch;margin-top:.6rem}
+.k8s{border:1px dashed rgba(217,164,65,.55);border-radius:var(--r);padding:1.2rem}
+.k8sl{display:block;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.svc{display:grid;grid-template-columns:repeat(5,1fr);gap:.7rem}
+.svc div,.screen{padding:1rem;border:1px solid var(--line);border-radius:14px;background:var(--bg);font-size:.85rem;color:var(--mute)}
+.svc b{display:block;color:var(--ink);font:400 1.02rem Fraunces,serif;word-break:break-word}
+.svc i{display:block;font-style:normal;color:var(--gold);font-size:.78rem;margin:.1rem 0 .4rem}
+.bus{margin-top:.9rem;padding:.8rem 1rem;border-radius:99px;text-align:center;font-size:.85rem;background:rgba(217,164,65,.12);border:1px solid rgba(217,164,65,.4);color:var(--ink)}
+.screens{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
+.screen b{display:block;color:var(--ink);font:400 1.1rem Fraunces,serif;margin-bottom:.5rem}
+.screen ul{padding-left:1.1rem}.screen li{margin-bottom:.3rem}
+.pj .meta{margin-top:1.3rem}.pj .note{margin-top:1rem;font-size:.85rem;color:var(--mute)}
+@media(max-width:960px){.svc{grid-template-columns:repeat(2,1fr)}.screens{grid-template-columns:1fr}}
+
+/* Aims & convictions */
+.vals{display:grid;grid-template-columns:1.2fr .8fr;gap:4rem;margin-top:3rem}
+.vals h3{font-size:1.6rem;margin-bottom:1.4rem}
+.conv{display:grid;grid-template-columns:3.2rem 1fr;gap:.4rem 1rem;padding:1.4rem 0;border-top:1px solid var(--line)}
+.conv:last-child{border-bottom:1px solid var(--line)}
+.conv span{grid-row:span 2;font:italic 300 1.9rem Fraunces,serif;color:var(--gold);line-height:1}
+.conv b{font:400 1.3rem Fraunces,serif}
+.conv p{color:var(--mute);font-size:.95rem}
+.aim{padding:1.3rem 1.4rem;margin-bottom:1rem;border:1px solid var(--line);border-left:2px solid var(--gold);border-radius:var(--r);background:var(--bg2);color:var(--mute);font-size:.95rem}
+.aim b{display:block;margin-bottom:.2rem;color:var(--ink);font:400 1.15rem Fraunces,serif}
+@media(max-width:860px){.vals{grid-template-columns:1fr;gap:3rem}}
+
+/* About */
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:start}
+.about p+p{margin-top:1.1rem}
+.about p{color:var(--mute)}
+.about p.pull{font:italic 300 1.4rem/1.5 Fraunces,serif;color:var(--ink);border-left:2px solid var(--gold);padding-left:1.2rem;margin-top:1.6rem}
+.list{list-style:none;border-top:1px solid var(--line)}
+.list li{display:flex;justify-content:space-between;gap:1rem;padding:1.1rem 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.list span{color:var(--mute)}
+.stack{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2rem}
+
+/* Contact */
+.contact{text-align:center;background:radial-gradient(50rem 24rem at 50% 100%,rgba(217,164,65,.13),transparent 70%)}
+.mail{display:inline-block;font:300 clamp(1.5rem,5.2vw,3.8rem) Fraunces,serif;border-bottom:1px solid var(--gold);padding-bottom:.2rem;margin:1.5rem 0 2.4rem;word-break:break-all;transition:.3s}
+.mail:hover{color:var(--gold)}
+.contact .cta{justify-content:center}
+footer{border-top:1px solid var(--line);padding:1.8rem 0;color:var(--mute);font-size:.82rem}
+footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+
+/* Socials */
+.soc{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.9rem;max-width:980px;margin:0 auto;text-align:left}
+.sc{display:flex;align-items:center;gap:1rem;padding:1.1rem 1.3rem;border:1px solid var(--line);border-radius:var(--r);background:rgba(20,17,15,.7);transition:.3s}
+.sc:hover,.sc.main{border-color:var(--gold)}.sc:hover{transform:translateY(-3px)}
+.ic{flex:none;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:rgba(217,164,65,.12);color:var(--gold)}
+.ic svg,.fsoc svg{width:22px;height:22px}
+.sc b{display:block;font-weight:500}.sc small{color:var(--mute);font-size:.8rem;word-break:break-all}
+.fsoc{display:flex;gap:1.1rem}.fsoc a{color:var(--mute);transition:.3s}.fsoc a:hover{color:var(--gold)}.fsoc svg{width:20px;height:20px}
+
+/* Lightbox */
+dialog{border:0;margin:0;padding:0;width:100vw;height:100vh;max-width:none;max-height:none;background:rgba(8,7,6,.97);color:#fff}
+dialog[open]{display:grid;place-items:center}
+dialog::backdrop{background:#000}
+#lbi{max-height:84vh;max-width:92vw;border-radius:10px}
+#lbc{position:absolute;bottom:1.4rem;left:0;right:0;text-align:center;font-size:.85rem;color:var(--mute)}
+dialog button{position:absolute;background:rgba(255,255,255,.08);border:1px solid var(--line);color:#fff;width:48px;height:48px;border-radius:50%;font-size:1.3rem;cursor:pointer;transition:.3s}
+dialog button:hover{background:var(--gold);color:#17110a}
+#x{top:1.2rem;right:1.2rem}#prev{left:1.2rem;top:50%}#next{right:1.2rem;top:50%}
+
+/* Reveal */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity 1s,transform 1s}
+.js .rv.in{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .hero .wrap,.about{grid-template-columns:1fr;gap:3rem}
+  .frame{margin:0 auto 0 0;max-width:340px}
+  .trio{grid-template-columns:1fr}.trio .ph:nth-child(2){margin-top:0}
+  #menu{display:block}
+  .links{position:fixed;inset:68px 0 auto;flex-direction:column;gap:1.2rem;padding:1.5rem 4%;background:var(--bg);border-bottom:1px solid var(--line);transform:translateY(-130%);transition:.4s}
+  header.open .links{transform:none}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.7-4.8A9 9 0 1 1 8 19.3L3 21z"/><path d="M9 8.6c.2 2.9 2.5 5.2 5.4 5.4l1.3-1.4-1.9-1-.9.8c-.9-.4-1.9-1.4-2.3-2.3l.8-.9-1-1.9L9 8.6z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-ph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></symbol>
+  <symbol id="i-tt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v11.2a3.8 3.8 0 1 1-3.8-3.8"/><path d="M14 3c.3 2.6 2 4.3 5 4.6"/></symbol>
+  <symbol id="i-li" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+  <symbol id="i-gh" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+</svg>
+<header id="top">
+  <div class="wrap">
+    <a class="logo" href="#top">A<b>.</b>A</a>
+    <button id="menu" aria-label="Menu">☰</button>
+    <nav class="links">
+      <a href="#work">Photo work</a><a href="#mindbridge">MindBridge</a><a href="#architecture">Projects</a><a href="#code">GitHub</a><a href="#about">About</a><a href="#aims">Aims</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow rv">Software engineer · Brand model</p>
+      <h1 class="rv">Ada <em>Alexandra</em></h1>
+      <p class="lead rv">I build full-stack web applications, and I step in front of the camera for brands. Two crafts, one obsession with detail.</p>
+      <div class="cta rv"><a class="btn fill" href="#work">See the photo work</a><a class="btn" href="#code">View my code</a></div>
+      <div class="facts rv">
+        <div><b>Year 4</b>Software Engineering, ICT University</div>
+        <div><b>Since Nov 2025</b>Brand model</div>
+        <div><b>Cameroon</b>Open to collaborations</div>
+      </div>
+    </div>
+    <div class="frame rv"><img src="images/oshine-3.jpg" width="1071" height="1500" alt="Studio portrait in a white halter top against a black backdrop"></div>
+  </div>
+</section>
+
+<div class="marq" aria-hidden="true"><div>
+  <span>Full-stack development</span><i>✦</i><span>Brand modeling</span><i>✦</i><span>JavaScript</span><i>✦</i><span>Editorial</span><i>✦</i><span>Node.js</span><i>✦</i><span>Campaigns</span><i>✦</i><span>Python</span><i>✦</i>
+</div></div>
+
+<!-- ===== PHOTO WORK ===== -->
+<section class="sec" id="work">
+  <div class="wrap">
+    <p class="eyebrow rv">Photo work</p>
+    <h2 class="rv">In front of <em>the lens</em></h2>
+    <p class="lead rv">Beauty editorials and brand campaigns. Tap any photo to view it full screen.</p>
+    <div class="worked">
+      <p class="eyebrow rv">Studios &amp; brands I've worked with</p>
+      <div class="wlist">
+        <figure class="wi rv"><div class="wc"><img src="images/studio-six.jpg" width="240" height="240" loading="lazy" alt="Studio Six logo"></div><figcaption>Studio Six</figcaption></figure>
+        <figure class="wi rv"><div class="wc"><img src="images/lo-studio.jpg" width="240" height="240" loading="lazy" alt="LO Studio logo"></div><figcaption>LO Studio</figcaption></figure>
+        <figure class="wi rv"><div class="wc"><img src="images/bmw-circle.jpg" width="240" height="240" loading="lazy" alt="B_Magic Wig logo"></div><figcaption>B_Magic Wig</figcaption></figure>
+        <!-- When you have the O-shine Makeup logo, replace the text circle below with: <div class="wc"><img src="images/oshine-logo.png" ...></div> -->
+        <figure class="wi rv"><div class="wc txt">O-shine</div><figcaption>O-shine Makeup</figcaption></figure>
+      </div>
+    </div>
+
+
+    <div class="chapter">
+      <!-- When you have the O-shine Makeup logo: copy the .brandrow block from the B_Magic Wig chapter below and use images/oshine-logo.png -->
+      <h3 class="rv">Beauty editorial</h3>
+      <p class="lead rv">A studio collaboration with makeup artist <b>O-shine Makeup</b>: golden liner, glossy skin and two backdrops.</p>
+      <div class="trio">
+        <div class="rv"><button class="ph" data-cap="Editorial · makeup by O-shine Makeup"><img src="images/oshine-1.jpg" width="1072" height="1500" loading="lazy" alt="Close portrait with golden eyeliner, hand in hair, lavender backdrop"></button></div>
+        <div class="rv"><button class="ph" data-cap="Editorial · makeup by O-shine Makeup"><img src="images/oshine-2.jpg" width="1072" height="1500" loading="lazy" alt="Beauty close-up with mustard eyeshadow and glossy lips"></button></div>
+        <div class="rv"><button class="ph" data-cap="Editorial · makeup by O-shine Makeup"><img src="images/oshine-3.jpg" width="1071" height="1500" loading="lazy" alt="Seated portrait in a white halter top on a black backdrop"></button></div>
+      </div>
+    </div>
+
+    <div class="chapter">
+      <div class="brandrow rv">
+        <img class="blogo" src="images/bmw-logo.jpg" width="750" height="637" loading="lazy" alt="B_Magic Wig logo, 100% Human Hair">
+        <div><h3>B_Magic Wig</h3>
+        <p class="lead">I'm one of the brand models for <b>B_Magic Wig</b>, a Cameroonian brand selling 100% human hair. Studio campaign and street lifestyle shoots.</p></div>
+      </div>
+      <div class="masonry">
+        <div class="rv"><button class="ph" data-cap="B_Magic Wig · Campaign"><img src="images/bmw-1.jpg" width="828" height="1037" loading="lazy" alt="Model with long straight auburn hair, black bodysuit, grey studio backdrop"></button></div>
+        <div class="rv"><button class="ph" data-cap="B_Magic Wig · Campaign"><img src="images/bmw-5.jpg" width="1024" height="1280" loading="lazy" alt="Seven models in black bodysuits showing different wig styles"></button></div>
+        <div class="rv"><button class="ph" data-cap="B_Magic Wig · Lifestyle"><img src="images/bmw-6.jpg" width="1000" height="1500" loading="lazy" alt="Three women holding pink B_Magic Wig shopping bags in front of a green hedge"></button></div>
+        <div class="rv"><button class="ph" data-cap="B_Magic Wig · Campaign"><img src="images/bmw-2.jpg" width="828" height="1046" loading="lazy" alt="Two models with long straight wigs, black bodysuits, grey backdrop"></button></div>
+        <div class="rv"><button class="ph" data-cap="B_Magic Wig · Lifestyle"><img src="images/bmw-7.jpg" width="828" height="1460" loading="lazy" alt="Smiling woman with wavy ombre hair holding a B_Magic Wig bag on the street"></button></div>
+        <div class="rv"><button class="ph" data-cap="B_Magic Wig · Campaign"><img src="images/bmw-3.jpg" width="828" height="1046" loading="lazy" alt="Three models in profile and portrait showing curly and straight wigs"></button></div>
+        <div class="rv"><button class="ph" data-cap="B_Magic Wig · Campaign"><img src="images/bmw-4.jpg" width="864" height="1080" loading="lazy" alt="Three models posed together with long curly and straight wigs"></button></div>
+        <div class="rv"><button class="ph" data-cap="B_Magic Wig · Lifestyle"><img src="images/bmw-8.jpg" width="828" height="1465" loading="lazy" alt="Three women walking down a street carrying B_Magic Wig bags"></button></div>
+      </div>
+    </div>
+
+    <!-- Studio: photo in images/studio-bts.jpg, clips in videos/studio-1..3.mp4 (a missing clip hides itself) -->
+    <div class="chapter" id="studio">
+      <h3 class="rv">In the studio</h3>
+      <p class="lead rv">Behind the scenes from my shoots: the lights, the setups and the work between the frames.</p>
+      <div class="vids">
+        <div class="rv"><button class="ph" data-cap="Behind the scenes · studio"><img src="images/studio-bts.jpg" width="1125" height="1500" loading="lazy" alt="Behind the scenes: a model posing on a white backdrop while a photographer shoots, softbox in the foreground"></button></div>
+        <div class="vcard rv"><video controls playsinline preload="metadata" poster="images/studio-1-poster.jpg"><source src="videos/studio-1.mp4" type="video/mp4"></video></div>
+        <div class="vcard rv"><video controls playsinline preload="metadata" poster="images/studio-2-poster.jpg"><source src="videos/studio-2.mp4" type="video/mp4"></video></div>
+        <div class="vcard rv"><video controls playsinline preload="metadata" poster="images/studio-3-poster.jpg"><source src="videos/studio-3.mp4" type="video/mp4"></video></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURED PROJECT: MINDBRIDGE ===== -->
+<section class="sec" id="mindbridge" style="background:var(--bg2)">
+  <div class="wrap">
+    <p class="eyebrow rv">Featured project</p>
+    <h2 class="rv">Mind<em>Bridge</em></h2>
+    <p class="lead rv">A full-stack campus mental health platform for students at African universities, where institutional counseling support is often limited. Students track their mood anonymously, journal privately, support each other in an anonymous forum, access wellness resources, flag crises and chat with an AI wellness companion.</p>
+    <div class="mb">
+      <div class="vid rv">
+        <!-- Put your demo video at videos/mindbridge.mp4 -->
+        <video id="demo" controls preload="metadata" playsinline><source src="videos/mindbridge.mp4" type="video/mp4"></video>
+        <div id="demo-soon" class="soon" hidden>Demo video coming soon</div>
+      </div>
+      <div class="rv">
+        <p class="principle">No admin can ever identify which student submitted what. Enforced at the data layer, not just the API.<small>Core design principle</small></p>
+        <div class="cta" style="margin-top:2rem"><a class="btn fill" href="https://github.com/ebodeadaerika/Mindbridge_app" target="_blank" rel="noopener">View code ↗</a></div>
+      </div>
+    </div>
+    <h3 class="rv" style="font-size:1.7rem;margin-top:4rem">Privacy architecture</h3>
+    <div class="arch rv">
+      <div><b>Student</b>Signs in with standard auth and uses the app.</div>
+      <div><b>API</b>user_id never appears in responses. Admin access to journals is structurally blocked.</div>
+      <div><b>Database</b>Mood data is keyed by anon_token only, with no identity column.</div>
+      <div><b>MindBot</b>Groq · Llama 3.3-70B. Conversations are not stored server-side.</div>
+    </div>
+    <h3 class="rv" style="font-size:1.7rem;margin-top:4rem">Features and how each protects privacy</h3>
+    <div class="feats"><div class="feat rv"><h4>Mood check-in</h4><p>Daily 1–5 mood and energy score with an optional note.</p><span class="lock">🔒 Stored with anon_token only, never user_id</span></div><div class="feat rv"><h4>Private journal</h4><p>Create, read, update and delete personal entries.</p><span class="lock">🔒 Admin access structurally blocked</span></div><div class="feat rv"><h4>Anonymous forum</h4><p>Post and reply using auto-generated animal names.</p><span class="lock">🔒 user_id never appears in API responses</span></div><div class="feat rv"><h4>Crisis flagging</h4><p>Low, medium and high severity alerts for counselors.</p><span class="lock">🔒 No identity column in the database</span></div><div class="feat rv"><h4>Resource library</h4><p>Articles, hotlines and coping exercises.</p><span class="lock">🔒 Admin-managed, readable by all users</span></div><div class="feat rv"><h4>MindBot AI chat</h4><p>24/7 AI wellness companion powered by Groq (Llama 3.3-70B).</p><span class="lock">🔒 Conversation not stored server-side</span></div><div class="feat rv"><h4>Profile</h4><p>Update name, university and avatar.</p><span class="lock">🔒 Standard authentication</span></div></div>
+  </div>
+</section>
+
+<!-- ===== MORE PROJECTS ===== -->
+<section class="sec" id="architecture">
+  <div class="wrap">
+    <p class="eyebrow rv">Engineering</p>
+    <h2 class="rv">More <em>projects</em></h2>
+    <p class="lead rv">Two more builds, and how each one is put together.</p>
+
+    <article class="pj rv">
+      <div class="pjh"><div><h3>HELEP<small>Emergency Response Platform</small></h3><p>A microservices-based emergency dispatch platform, built for a 24-hour capstone exercise.</p></div>
+      <a class="btn" href="https://github.com/ebodeadaerika/HELEP" target="_blank" rel="noopener">View code ↗</a></div>
+      <div class="k8s"><span class="k8sl">Kubernetes · deployed with a Helm umbrella chart</span>
+        <div class="svc"><div><b>user-service</b><i>:8001</i>Registration, login, JWT issuance</div><div><b>sos-service</b><i>:8002</i>SOS intake, incident lifecycle</div><div><b>dispatch-service</b><i>:8003</i>Responder matching, saga orchestration</div><div><b>notification-service</b><i>:8004</i>SMS and push delivery</div><div><b>analytics-service</b><i>:8005</i>Metrics aggregation</div></div>
+        <div class="bus">Apache Kafka (Strimzi): events flow between the services</div>
+      </div>
+      <div class="meta"><span class="chip hot">Microservices</span><span class="chip">Apache Kafka</span><span class="chip">Kubernetes</span><span class="chip">Helm</span><span class="chip">Docker Compose</span><span class="chip">JWT</span></div>
+      <p class="note">Local dev: the whole stack can be smoke-tested with Docker Compose, no Kubernetes needed.</p>
+    </article>
+
+    <article class="pj rv">
+      <div class="pjh"><div><h3>StudyFlow<small>Smart Student Time Management App</small></h3><p>An Android app that helps students plan, focus and measure how they really spend their study time.</p></div>
+      <a class="btn" href="https://github.com/angecatti/SmartStudentTimeManager" target="_blank" rel="noopener">View code ↗</a></div>
+      <div class="screens"><div class="screen"><b>Home</b><ul><li>Daily progress ring showing % of goal</li><li>Study streak counter (consecutive days)</li><li>Urgent deadline cards with day countdown</li></ul></div><div class="screen"><b>Focus</b><ul><li>Subject selector and goal setting</li><li>Music for focus: Lo-Fi, Rain, Forest or White Noise</li><li>MediaPlayer in a Foreground Service for uninterrupted audio</li><li>Free timer and Pomodoro (25/5/15)</li><li>Post-session reflection on mood and productivity</li></ul></div><div class="screen"><b>Reports</b><ul><li>Focus Score and weekly study vs distraction bar charts</li><li>Real app usage tracking via UsageStatsManager</li></ul></div></div>
+      <div class="meta"><span class="chip hot">Kotlin</span><span class="chip">Jetpack Compose</span><span class="chip">Room</span><span class="chip">Hilt</span><span class="chip">Foreground Service</span><span class="chip">UsageStatsManager</span></div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== CODE (live from GitHub) ===== -->
+<section class="sec" id="code">
+  <div class="wrap">
+    <p class="eyebrow rv">GitHub</p>
+    <h2 class="rv">Things I've <em>built</em></h2>
+    <p class="lead rv">More from my GitHub, pulled live so this list updates whenever I push something new.</p>
+    <div class="repos" id="repos"><p class="lead">Loading projects…</p></div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="sec" id="about">
+  <div class="wrap about">
+    <div>
+      <p class="eyebrow rv">About</p>
+      <h2 class="rv">Where beauty and <em>intelligence</em> combine</h2>
+      <p class="rv">I am a passionate software engineer who loves building and creating. For me, it's not just a dream career; it's a way to express my creativity. Every line of code is a chance to bring an idea to life, to solve a problem, and to craft something meaningful.</p>
+      <p class="rv">Outside of tech, I live as a brand model. I've always loved being in front of the camera, and I knew it was my way to be. Modeling is another way for me to show the beauty behind every product I represent, always as a work of art. It's where beauty and intelligence combine, and I get to express that awesome blend of creativity, confidence, and skill.</p>
+      <p class="pull rv">Whether I'm building a web application or representing a brand, I'm driven by the same thing: the joy of creating something that connects, inspires, and stands out.</p>
+      <div class="stack rv"><span class="chip hot">HTML / CSS / JS</span><span class="chip">React</span><span class="chip">Node.js</span><span class="chip">Python · Django</span><span class="chip">PHP</span><span class="chip">MySQL · PostgreSQL · MongoDB</span><span class="chip">Git · GitHub</span><span class="chip">Docker</span></div>
+    </div>
+    <ul class="list rv">
+      <li><span>Studying</span>Software Engineering, Year 4</li>
+      <li><span>University</span>ICT University</li>
+      <li><span>Modeling</span>Since November 2025</li>
+      <li><span>Worked with</span>Studio Six · LO Studio · B_Magic Wig · O-shine Makeup</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== AIMS & CONVICTIONS ===== -->
+<section class="sec" id="aims" style="background:var(--bg2)">
+  <div class="wrap">
+    <p class="eyebrow rv">Aims &amp; convictions</p>
+    <h2 class="rv">The <em>brand model</em> engineer</h2>
+    <p class="lead rv">Two careers, one way of working. These are the beliefs I bring to every shoot and every commit, and where I'm heading.</p>
+    <div class="vals">
+      <div><h3 class="rv">Convictions</h3><div class="conv rv"><span>01</span><b>Beauty is a work of art</b><p>Every product I represent deserves to be shown with care, craft and intention, never as an afterthought.</p></div><div class="conv rv"><span>02</span><b>Beauty and intelligence belong together</b><p>Creativity, confidence and skill are not opposites. The best work happens when all three show up.</p></div><div class="conv rv"><span>03</span><b>Details decide everything</b><p>An engineer's eye for small things, like a pose, a shadow or an edge case, is what makes the result feel effortless.</p></div><div class="conv rv"><span>04</span><b>People come first</b><p>Building MindBridge meant designing around people's privacy and dignity. I bring that same respect to every brand and every team.</p></div></div>
+      <div><h3 class="rv">Aims</h3><div class="aim rv"><b>Grow as a brand model</b>Work with more brands and creative teams, from the first idea to the final image.</div><div class="aim rv"><b>Graduate as a software engineer</b>Keep building products that help people, the way MindBridge does.</div><div class="aim rv"><b>Bring both worlds together</b>Lend my engineering to beauty, fashion and creative brands, and my eye as a model to the things I build.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="sec contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow rv">Contact</p>
+    <h2 class="rv">Let's <em>work together</em></h2>
+    <p class="lead rv" style="margin-inline:auto">Hiring, collaborating or booking a shoot: say hello.</p>
+    <a class="mail rv" href="mailto:adaerika01@icloud.com">adaerika01@icloud.com</a>
+    <div class="soc rv">
+      <a class="sc main" href="https://wa.me/237696208261?text=Hello%20Ada%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20get%20in%20touch." target="_blank" rel="noopener"><span class="ic"><svg aria-hidden="true"><use href="#i-wa"/></svg></span><span><b>WhatsApp</b><small>+237 696 208 261</small></span></a>
+      <a class="sc" href="tel:+237687972410"><span class="ic"><svg aria-hidden="true"><use href="#i-ph"/></svg></span><span><b>Call me</b><small>+237 687 972 410</small></span></a>
+      <a class="sc" href="https://www.instagram.com/slaybby_lexa" target="_blank" rel="noopener"><span class="ic"><svg aria-hidden="true"><use href="#i-ig"/></svg></span><span><b>Instagram</b><small>@slaybby_lexa</small></span></a>
+      <a class="sc" href="https://www.tiktok.com/@_say_slay" target="_blank" rel="noopener"><span class="ic"><svg aria-hidden="true"><use href="#i-tt"/></svg></span><span><b>TikTok</b><small>@_say_slay</small></span></a>
+      <a class="sc" href="https://www.linkedin.com/in/ebode-ada-erika-alexandra-52b5613ba" target="_blank" rel="noopener"><span class="ic"><svg aria-hidden="true"><use href="#i-li"/></svg></span><span><b>LinkedIn</b><small>Ebode Ada Erika Alexandra</small></span></a>
+      <a class="sc" href="https://github.com/ebodeadaerika" target="_blank" rel="noopener"><span class="ic"><svg aria-hidden="true"><use href="#i-gh"/></svg></span><span><b>GitHub</b><small>ebodeadaerika</small></span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Ebode Ada Erika Alexandra</span><span class="fsoc"><a href="https://wa.me/237696208261?text=Hello%20Ada%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20get%20in%20touch." aria-label="WhatsApp" target=_blank rel=noopener><svg aria-hidden="true"><use href="#i-wa"/></svg></a><a href="https://www.instagram.com/slaybby_lexa" aria-label="Instagram" target=_blank rel=noopener><svg aria-hidden="true"><use href="#i-ig"/></svg></a><a href="https://www.tiktok.com/@_say_slay" aria-label="TikTok" target=_blank rel=noopener><svg aria-hidden="true"><use href="#i-tt"/></svg></a><a href="https://www.linkedin.com/in/ebode-ada-erika-alexandra-52b5613ba" aria-label="LinkedIn" target=_blank rel=noopener><svg aria-hidden="true"><use href="#i-li"/></svg></a><a href="https://github.com/ebodeadaerika" aria-label="GitHub" target=_blank rel=noopener><svg aria-hidden="true"><use href="#i-gh"/></svg></a></span><a href="#top">Back to top ↑</a></div></footer>
+
+<dialog id="lb" aria-label="Photo viewer">
+  <button id="x" aria-label="Close">✕</button><button id="prev" aria-label="Previous">←</button><button id="next" aria-label="Next">→</button>
+  <img id="lbi" alt=""><div id="lbc"></div>
+</dialog>
+
+<script>
+/* ===== SETTINGS: edit these ===== */
+const CFG = {
+  github: "ebodeadaerika",   // your GitHub username
+  featured: [],              // e.g. ["my-shop","school-app"] to show only these repos, in this order. Empty = latest 6
+  max: 6
+};
+
+const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+// Header + mobile menu
+const hd = $("header");
+addEventListener("scroll", () => hd.classList.toggle("solid", scrollY > 40), {passive: true});
+$("#menu").onclick = () => hd.classList.toggle("open");
+$$(".links a").forEach(a => a.onclick = () => hd.classList.remove("open"));
+
+// Scroll reveal
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), {threshold: .12});
+const watch = () => $$(".rv:not(.in)").forEach(el => io.observe(el));
+watch();
+
+// Marquee loop
+const mq = $(".marq div"); mq.innerHTML += mq.innerHTML;
+
+// Lightbox
+const items = $$(".ph"), lb = $("#lb"), lbi = $("#lbi"), lbc = $("#lbc"); let cur = 0;
+const show = i => { cur = (i + items.length) % items.length; const b = items[cur], im = $("img", b); lbi.src = im.src; lbi.alt = im.alt; lbc.textContent = `${b.dataset.cap}  ·  ${cur + 1} / ${items.length}`; };
+items.forEach((b, i) => b.onclick = () => { show(i); lb.showModal(); });
+$("#prev").onclick = () => show(cur - 1); $("#next").onclick = () => show(cur + 1); $("#x").onclick = () => lb.close();
+lb.onclick = e => { if (e.target === lb) lb.close(); };
+addEventListener("keydown", e => { if (!lb.open) return; if (e.key === "ArrowLeft") show(cur - 1); if (e.key === "ArrowRight") show(cur + 1); });
+
+// MindBridge demo video fallback
+const dv = $("#demo");
+const demoCheck = () => { if (dv && dv.networkState === 3) { dv.hidden = true; $("#demo-soon").hidden = false; } };
+if (dv) { $("source", dv).addEventListener("error", demoCheck); addEventListener("load", demoCheck); }
+
+// Studio videos: hide any clip that is missing
+const vcheck = () => {
+  $$(".vcard").forEach(c => { if ($("video", c).networkState === 3) c.hidden = true; });
+};
+$$(".vcard source").forEach(x => x.addEventListener("error", vcheck));
+addEventListener("load", vcheck);
+
+// GitHub projects
+(async () => {
+  const box = $("#repos");
+  try {
+    const r = await fetch(`https://api.github.com/users/${CFG.github}/repos?per_page=100&sort=pushed`);
+    if (!r.ok) throw 0;
+    let l = (await r.json()).filter(x => !x.fork && !["mindbridge_app","helep"].includes(x.name.toLowerCase()));
+    if (CFG.featured.length) l = CFG.featured.map(n => l.find(x => x.name === n)).filter(Boolean);
+    if (!l.length) throw 0;
+    box.innerHTML = l.slice(0, CFG.max).map(x => `
+      <article class="repo rv">
+        <h3>${esc(x.name)}</h3>
+        <p>${esc(x.description) || "A project on my GitHub."}</p>
+        <div class="meta">${x.language ? `<span class="chip hot">${esc(x.language)}</span>` : ""}${(x.topics || []).slice(0, 3).map(t => `<span class="chip">${esc(t)}</span>`).join("")}</div>
+        <div class="rlinks"><a href="${esc(x.html_url)}" target="_blank" rel="noopener">Code ↗</a>${x.homepage ? `<a href="${esc(x.homepage)}" target="_blank" rel="noopener">Live ↗</a>` : ""}</div>
+      </article>`).join("");
+    watch();
+  } catch {
+    box.innerHTML = `<a class="repo" href="https://github.com/${esc(CFG.github)}" target="_blank" rel="noopener"><h3>Browse my repositories</h3><p>Open my GitHub profile to see everything I've built.</p><div class="rlinks"><span>github.com/${esc(CFG.github)} ↗</span></div></a>`;
+  }
+})();
+</script>
+</body>
+</html>
